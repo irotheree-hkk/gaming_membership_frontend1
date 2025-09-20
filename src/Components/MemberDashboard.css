@@ -1,0 +1,187 @@
+.member-dashboard {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #FDF2F8 0%, #F3E8FF 50%, #E879F9 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.member-dashboard::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(232, 121, 249, 0.1) 0%, transparent 70%);
+  animation: float 7s ease-in-out infinite;
+  z-index: 0;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-25px) rotate(180deg); }
+}
+
+.member-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #E879F9 0%, #A855F7 100%);
+  color: white;
+  padding: 20px 40px;
+  box-shadow: 0 4px 16px rgba(232, 121, 249, 0.3);
+  border-bottom: 3px solid #EC4899;
+  position: relative;
+  z-index: 1;
+}
+
+.member-logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.member-icon {
+  font-size: 32px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.member-title {
+  font-size: 28px;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  letter-spacing: 1px;
+}
+
+.logout-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.logout-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.member-main {
+  padding: 40px;
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.member-welcome {
+  text-align: center;
+  margin-bottom: 50px;
+  background: linear-gradient(135deg, #FFFFFF 0%, #FEF7FF 100%);
+  padding: 40px;
+  border-radius: 20px;
+  border: 2px solid #E8B4B8;
+  box-shadow: 0 12px 40px rgba(219, 39, 119, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.member-welcome h1 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #831843;
+  margin-bottom: 15px;
+  text-shadow: 0 3px 6px rgba(131, 24, 67, 0.2);
+  letter-spacing: 1px;
+}
+
+.member-welcome p {
+  font-size: 18px;
+  color: #6B21A8;
+  font-weight: 500;
+  text-shadow: 0 2px 4px rgba(107, 33, 168, 0.2);
+}
+
+.member-actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 40px;
+  justify-items: center;
+}
+
+.action-card {
+  background: linear-gradient(135deg, #FFFFFF 0%, #FEF7FF 100%);
+  padding: 50px;
+  border-radius: 20px;
+  border: 2px solid #E8B4B8;
+  box-shadow: 0 12px 40px rgba(219, 39, 119, 0.2);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 400px;
+}
+
+.action-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(135deg, #E879F9 0%, #A855F7 100%);
+}
+
+.action-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(219, 39, 119, 0.3);
+}
+
+.action-icon {
+  font-size: 80px;
+  margin-bottom: 25px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.action-card h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #831843;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 4px rgba(131, 24, 67, 0.1);
+}
+
+.action-card p {
+  color: #6B21A8;
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.member-footer {
+  background: linear-gradient(135deg, #E879F9 0%, #A855F7 100%);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  margin-top: 50px;
+  box-shadow: 0 -4px 16px rgba(232, 121, 249, 0.3);
+  border-top: 3px solid #EC4899;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 1;
+} 
